@@ -1,0 +1,62 @@
+<!-- 直接引入vue -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>调查问卷</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app" v-cloak>
+    <pane @reset-index="reset" :picked="picked" :checked="checked">
+      <div slot="content">
+        <my-content index="1" title="请问您的性别是:">
+          <input @click="handlePick" v-model="picked" type="radio" id="sex1" name="sex" value="男">
+          <label  for="sex1">男</label>
+          <input @click="handlePick" v-model="picked" type="radio" id="sex2" name="sex" value="女">
+          <label for="sex2">女</label>
+          <input @click="handlePick" v-model="picked" type="radio" id="sex3" name="sex" value="保留">
+          <label for="sex2">保留</label>
+        </my-content>
+        <my-content index="2" title="请选择您的兴趣爱好:">
+          <div>
+            <input @click="handleCheck" v-model="checked" type="checkbox" id="reding" name="hobby" value="reding">
+            <label for="reding" onclick="">看书</label>
+          </div>
+          <div>
+            <input @click="handleCheck" v-model="checked" type="checkbox" id="swimming" name="hobby" value="swimming">
+            <label for="swimming" onclick="">游泳</label>
+          </div>
+          <div>
+            <input @click="handleCheck" v-model="checked" type="checkbox" id="running" name="hobby" value="running">
+            <label for="running" onclick="">跑步</label>
+          </div>
+          <div>
+            <input @click="handleCheck" v-model="checked" type="checkbox" id="watching" name="hobby" value="watching">
+            <label for="watching" onclick="">看电影</label>
+          </div>
+          <div>
+            <input @click="handleCheck"v-model="checked" type="checkbox" id="listening" name="hobby" value="listening">
+            <label for="listening" onclick="">听音乐</label>
+          </div>
+        </my-content>
+        <my-content index="3" title="清介绍一下自己:">
+          <textarea placeholder="不少于100字" name="self" id="self" cols="43" rows="8"></textarea>
+        </my-content>
+      </div>
+    </pane>
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+  <script src="pane.js"></script>
+  <script src="contents.js"></script>
+  <script src="buttons.js"></script>
+  <script src="index.js"></script>
+  <script>
+  </script>
+</body>
+
+</html>

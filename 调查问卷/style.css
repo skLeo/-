@@ -1,0 +1,54 @@
+[v-cloak] {
+  display: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 18px;
+}
+body {
+  height: 100%;
+}
+#app {
+  width: 100%;
+  height: 100%;
+}
+.main{
+  width: 94%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding: 5% 3%;
+}
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-around
+}
+.btn button {
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid #2F8CF0;
+  font-family: 'Yuanti SC';
+  font-weight: bold;
+  font-size: 1rem; 
+  flex: 1;
+  margin: 10px;
+  color: #232528;
+  outline: none;
+}
+#self {
+  width: 94%;
+  outline: none;
+  border: 1px solid #999;
+  border-radius: 10px; 
+  padding: 3%;
+  font: 1rem sans-serif;
+}
